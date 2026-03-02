@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulances L&eacute;a &mdash; Joinville-le-Pont (94)</title>
+    <meta name="description" content="Ambulances L&eacute;a &agrave; Joinville-le-Pont (94). Transport sanitaire 24h/24, 7j/7 : ambulances, VSL et taxi conventionn&eacute;. Val-de-Marne et &Icirc;le-de-France.">
+    <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Ambulances L&eacute;a &mdash; Joinville-le-Pont (94)">
+    <meta property="og:description" content="Transport sanitaire 24h/24 : ambulances, VSL, taxi. Joinville-le-Pont, Val-de-Marne.">
+    <meta property="og:type" content="website">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --blue: #1B4F72;
+            --blue-light: #2471A3;
+            --gold: #F1C40F;
+            --gold-dark: #D4AC0D;
+            --dark: #1A1A2E;
+            --gray-700: #333;
+            --gray-600: #555;
+            --gray-200: #e0e0e0;
+            --gray-100: #f5f5f5;
+            --white: #fafafa;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); color: var(--gray-700); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: #fff; border-bottom: 3px solid var(--blue); box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+        .nav-brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+        .nav-logo { height: 44px; border-radius: 4px; }
+        .nav-sep { width: 1px; height: 28px; background: var(--gray-200); }
+        .nav-name { font-family: var(--font-heading); font-weight: 700; font-size: 0.92rem; color: var(--dark); }
+        .nav-links { display: flex; gap: 28px; list-style: none; }
+        .nav-links a { font-family: var(--font-heading); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-600); text-decoration: none; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--blue); }
+        .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 8px; }
+        .nav-burger span { width: 26px; height: 3px; background: var(--dark); border-radius: 2px; }
+
+        .hero { position: relative; min-height: 88vh; display: flex; align-items: center; background: var(--dark); overflow: hidden; }
+        .hero-accent { position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: linear-gradient(135deg, var(--blue) 0%, #0E2F44 100%); clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); }
+        .hero-content { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 120px 24px 80px; width: 100%; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(241,196,15,0.15); border: 1px solid rgba(241,196,15,0.3); border-radius: 30px; padding: 8px 20px; margin-bottom: 28px; }
+        .hero-badge svg { width: 20px; height: 20px; fill: var(--gold); }
+        .hero-badge span { font-family: var(--font-heading); font-weight: 600; font-size: 0.78rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; }
+        .hero h1 { font-family: var(--font-heading); font-weight: 900; font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1; color: #fff; margin-bottom: 24px; max-width: 600px; }
+        .hero h1 em { color: var(--dark); font-style: normal; background: var(--gold); padding: 2px 12px; display: inline-block; margin-top: 8px; }
+        .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.65); max-width: 480px; margin-bottom: 40px; line-height: 1.7; }
+        .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero-urgence { display: inline-flex; align-items: center; gap: 8px; background: rgba(231,76,60,0.15); border: 1px solid rgba(231,76,60,0.3); border-radius: 8px; padding: 12px 20px; margin-top: 24px; color: #E74C3C; font-family: var(--font-heading); font-weight: 600; font-size: 0.85rem; }
+
+        .btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.04em; padding: 14px 32px; border-radius: 4px; text-decoration: none; transition: all 0.25s; border: none; cursor: pointer; }
+        .btn-blue { background: var(--blue); color: #fff; }
+        .btn-blue:hover { background: var(--blue-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(27,79,114,0.3); }
+        .btn-gold { background: var(--gold); color: var(--dark); }
+        .btn-gold:hover { background: var(--gold-dark); transform: translateY(-2px); }
+        .btn-ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.3); }
+        .btn-ghost:hover { border-color: #fff; color: #fff; }
+
+        .stats-bar { background: var(--blue); }
+        .stats-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+        .stat { padding: 24px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,0.15); }
+        .stat:last-child { border-right: none; }
+        .stat-num { font-family: var(--font-heading); font-weight: 900; font-size: 1.6rem; color: #fff; line-height: 1; }
+        .stat-label { font-family: var(--font-heading); font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.7); margin-top: 4px; }
+
+        .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+        .section-title { font-family: var(--font-heading); font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--dark); margin-bottom: 12px; line-height: 1.05; }
+        .section-subtitle { font-size: 0.95rem; color: var(--gray-600); max-width: 540px; margin-bottom: 48px; line-height: 1.7; }
+        .blue-line { width: 50px; height: 4px; background: var(--blue); margin-bottom: 16px; border-radius: 2px; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .srv { background: #fff; border: 1px solid var(--gray-200); padding: 28px 24px; display: flex; gap: 18px; align-items: flex-start; border-radius: 6px; transition: all 0.3s; }
+        .srv:hover { border-color: var(--blue); box-shadow: 0 8px 28px rgba(0,0,0,0.06); transform: translateY(-3px); }
+        .srv-icon { width: 48px; height: 48px; background: var(--blue); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .srv-icon svg { width: 24px; height: 24px; fill: #fff; }
+        .srv h3 { font-family: var(--font-heading); font-weight: 700; font-size: 0.95rem; color: var(--dark); margin-bottom: 6px; }
+        .srv p { font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; }
+
+        .engagement { background: var(--gray-100); }
+        .engagement-inner { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+        .engagement-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+        .eng-card { background: #fff; border-radius: 8px; padding: 32px 24px; text-align: center; border: 1px solid var(--gray-200); }
+        .eng-card svg { width: 40px; height: 40px; fill: var(--blue); margin-bottom: 16px; }
+        .eng-card h3 { font-family: var(--font-heading); font-weight: 700; font-size: 0.95rem; color: var(--dark); margin-bottom: 8px; }
+        .eng-card p { font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; }
+
+        .contact-inner { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px; }
+        .contact-card { background: #fff; border-radius: 8px; padding: 32px; border: 1px solid var(--gray-200); }
+        .contact-card h3 { font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; color: var(--dark); margin-bottom: 16px; }
+        .contact-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--gray-100); }
+        .contact-item:last-child { border-bottom: none; }
+        .contact-item svg { width: 20px; height: 20px; fill: var(--blue); flex-shrink: 0; }
+        .contact-item span { font-size: 0.92rem; color: var(--gray-700); }
+        .contact-item a { color: var(--dark); text-decoration: none; font-weight: 500; }
+        .contact-item a:hover { text-decoration: underline; color: var(--blue); }
+        .hours-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--gray-100); font-size: 0.9rem; }
+        .hours-row:last-child { border-bottom: none; }
+        .hours-day { color: var(--gray-700); font-weight: 500; }
+        .hours-time { color: var(--gray-600); }
+        .urgence-badge { display: inline-flex; align-items: center; gap: 6px; background: #E74C3C; color: #fff; padding: 8px 16px; border-radius: 4px; font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; margin-top: 16px; }
+
+        footer { background: var(--dark); padding: 40px 24px; text-align: center; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; }
+        .footer-logo { height: 40px; border-radius: 4px; margin-bottom: 16px; }
+        footer p { color: rgba(255,255,255,0.4); font-size: 0.82rem; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: fixed; top: 68px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 20px 24px; gap: 16px; border-top: 1px solid var(--gray-200); }
+            .nav-links.active { display: flex; }
+            .nav-burger { display: flex; }
+            .hero { min-height: 85vh; }
+            .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
+            .hero-accent { width: 100%; clip-path: polygon(0 60%, 100% 40%, 100% 100%, 0% 100%); opacity: 0.7; }
+            .stats-inner { grid-template-columns: repeat(2, 1fr); }
+            .stat:nth-child(2) { border-right: none; }
+            .services-grid { grid-template-columns: 1fr; }
+            .engagement-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <img src="img/logo.jpg" alt="Ambulances L&eacute;a" class="nav-logo">
+                <span class="nav-sep"></span>
+                <span class="nav-name">Ambulances L&eacute;a</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#engagements">Engagements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-burger" onclick="document.getElementById('navLinks').classList.toggle('active')" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-accent"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 10h-4v4h-4v-4H6v-4h4V5h4v4h4v4z"/></svg>
+                <span>24h/24 &mdash; 7j/7</span>
+            </div>
+            <h1>Ambulances L&eacute;a<br><em>Joinville-le-Pont</em></h1>
+            <p class="hero-sub">Transport sanitaire en Val-de-Marne et &Icirc;le-de-France. Ambulances, VSL et taxi conventionn&eacute; &mdash; disponibles jour et nuit, tous les jours de l'ann&eacute;e.</p>
+            <div class="hero-ctas">
+                <a href="tel:+33148891499" class="btn btn-gold">01 48 89 14 99</a>
+                <a href="#services" class="btn btn-ghost">Nos services</a>
+            </div>
+            <div class="hero-urgence">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Urgences : appelez-nous imm&eacute;diatement
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat">
+                <div class="stat-num">24/7</div>
+                <div class="stat-label">Disponibilit&eacute;</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">Joinville</div>
+                <div class="stat-label">Base d'intervention</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">&Icirc;le-de-France</div>
+                <div class="stat-label">Zone couverte</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Conventionn&eacute;</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section" id="services">
+        <div class="blue-line"></div>
+        <h2 class="section-title">Nos services</h2>
+        <p class="section-subtitle">Ambulances L&eacute;a assure le transport sanitaire de personnes vers les &eacute;tablissements de sant&eacute; du Val-de-Marne et de toute l'&Icirc;le-de-France.</p>
+        <div class="services-grid">
+            <div class="srv">
+                <div class="srv-icon">
+                    <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+                </div>
+                <div>
+                    <h3>Ambulances</h3>
+                    <p>Transport sanitaire m&eacute;dicalis&eacute; pour patients allong&eacute;s n&eacute;cessitant une surveillance pendant le trajet. V&eacute;hicules &eacute;quip&eacute;s conform&eacute;ment aux normes en vigueur.</p>
+                </div>
+            </div>
+            <div class="srv">
+                <div class="srv-icon">
+                    <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+                </div>
+                <div>
+                    <h3>V&eacute;hicules Sanitaires L&eacute;gers (VSL)</h3>
+                    <p>Transport assis pour consultations, examens, hospitalisations ou dialyses. Prise en charge par l'Assurance Maladie sur prescription m&eacute;dicale.</p>
+                </div>
+            </div>
+            <div class="srv">
+                <div class="srv-icon">
+                    <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+                </div>
+                <div>
+                    <h3>Taxi conventionn&eacute;</h3>
+                    <p>Service de taxi pour vos d&eacute;placements m&eacute;dicaux. Transport conventionn&eacute; avec prise en charge CPAM possible. Toutes distances en &Icirc;le-de-France.</p>
+                </div>
+            </div>
+            <div class="srv">
+                <div class="srv-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 10h-4v4h-4v-4H6v-4h4V5h4v4h4v4z"/></svg>
+                </div>
+                <div>
+                    <h3>Urgences &amp; gardes</h3>
+                    <p>Service de garde 24 heures sur 24, 7 jours sur 7, y compris les week-ends et jours f&eacute;ri&eacute;s. Intervention rapide sur Joinville-le-Pont et le Val-de-Marne.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="engagement" id="engagements">
+        <div class="engagement-inner">
+            <div class="blue-line"></div>
+            <h2 class="section-title">Nos engagements</h2>
+            <p class="section-subtitle">Un service de transport sanitaire professionnel et humain, au plus pr&egrave;s des besoins de chaque patient.</p>
+            <div class="engagement-grid">
+                <div class="eng-card">
+                    <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    <h3>Disponibilit&eacute; permanente</h3>
+                    <p>Garde assur&eacute;e 24h/24, 365 jours par an. Un ambulancier r&eacute;pond toujours &agrave; votre appel, de jour comme de nuit.</p>
+                </div>
+                <div class="eng-card">
+                    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    <h3>Confort du patient</h3>
+                    <p>V&eacute;hicules propres, confortables et r&eacute;guli&egrave;rement entretenus. Un soin particulier apport&eacute; au bien-&ecirc;tre de chaque patient transport&eacute;.</p>
+                </div>
+                <div class="eng-card">
+                    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                    <h3>Professionnalisme</h3>
+                    <p>&Eacute;quipe d'ambulanciers dipl&ocirc;m&eacute;s d'&Eacute;tat, form&eacute;s aux gestes de premiers secours et au transport sanitaire r&eacute;glement&eacute;.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-inner">
+            <div class="blue-line"></div>
+            <h2 class="section-title">Contactez-nous</h2>
+            <p class="section-subtitle">Pour r&eacute;server un transport ou en cas d'urgence, appelez-nous &agrave; tout moment. Nous intervenons sur Joinville-le-Pont et l'ensemble du Val-de-Marne.</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Coordonn&eacute;es</h3>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span>27 avenue Ratel, 94340 Joinville-le-Pont</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        <a href="tel:+33148891499">01 48 89 14 99</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <a href="mailto:ambulances.lea@gmail.com">ambulances.lea@gmail.com</a>
+                    </div>
+                    <div class="urgence-badge">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 10h-4v4h-4v-4H6v-4h4V5h4v4h4v4z"/></svg>
+                        Urgences 24h/24
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <h3>Disponibilit&eacute;</h3>
+                    <div class="hours-row"><span class="hours-day">Lundi &ndash; Vendredi</span><span class="hours-time">24h/24</span></div>
+                    <div class="hours-row"><span class="hours-day">Samedi</span><span class="hours-time">24h/24</span></div>
+                    <div class="hours-row"><span class="hours-day">Dimanche</span><span class="hours-time">24h/24</span></div>
+                    <div class="hours-row"><span class="hours-day">Jours f&eacute;ri&eacute;s</span><span class="hours-time">24h/24</span></div>
+                    <p style="margin-top: 16px; font-size: 0.85rem; color: var(--gray-600); line-height: 1.6;">Transport sur prescription m&eacute;dicale avec prise en charge par l'Assurance Maladie. N'h&eacute;sitez pas &agrave; nous appeler pour toute demande.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <img src="img/logo.jpg" alt="Ambulances L&eacute;a" class="footer-logo">
+            <p>Ambulances L&eacute;a &mdash; Transport sanitaire &mdash; &copy; 2026</p>
+            <p style="margin-top:6px;">27 avenue Ratel, 94340 Joinville-le-Pont &mdash; 01 48 89 14 99</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.nav-links a').forEach(function(a) {
+            a.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
